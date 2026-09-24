@@ -85,4 +85,4 @@ async def stop(ctx):
         await ctx.send("👋 Đã ngắt kết nối!")
 
 # Token của bạn
-bot.run('MTU1MjU4Mjc1Mzg2ODg0NTEwNg.GnryVe._CnJ3c4RWZ4Dk6bWaOs778TS8krtzSnjxSxo9o')
+bot.run('MTU1MjU4Mjc1Mzg2ODg0NTEwNg.GBtZ4Y.Vgb4eoiR0EGRbzCBRqxGUz82lqyJKJ-8KL6vBQ')
