@@ -21,13 +21,13 @@ def run_http_server():
 # Chạy ngầm HTTP server
 threading.Thread(target=run_http_server, daemon=True).start()
 
-# --- 2. CẤU HÌNH YTDL & FFMPEG (Đã fix lỗi chặn bot YouTube) ---
+# --- 2. CẤU HÌNH YTDL & FFMPEG (Né chặn bot bằng client TV/iOS) ---
 ytdl_format_options = {
     'format': 'bestaudio/best',
     'noplaylist': True,
     'default_search': 'auto',
     'source_address': '0.0.0.0',
-    'extractor_args': {'youtube': {'player_client': ['android', 'web']}}
+    'extractor_args': {'youtube': {'player_client': ['tv', 'ios', 'web']}}
 }
 
 ffmpeg_options = {
