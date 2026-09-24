@@ -25,7 +25,7 @@ threading.Thread(target=run_http_server, daemon=True).start()
 ytdl_format_options = {
     'format': 'bestaudio/best',
     'noplaylist': True,
-    'default_search': 'auto',
+    'default_search': 'scsearch',
     'source_address': '0.0.0.0',
     'extractor_args': {'youtube': {'player_client': ['tv', 'ios', 'web']}}
 }
