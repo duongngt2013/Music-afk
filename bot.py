@@ -6,7 +6,7 @@ import discord
 from discord.ext import commands
 import yt_dlp
 
-# --- 1. HTTP SERVER ĐỂ GIỮ RENDER LUÔN "ALIVE" ---
+# --- 1. HTTP SERVER NHỎ ĐỂ GIỮ RENDER LUÔN "ALIVE" ---
 class SimpleHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
@@ -21,12 +21,13 @@ def run_http_server():
 # Chạy ngầm HTTP server
 threading.Thread(target=run_http_server, daemon=True).start()
 
-# --- 2. CẤU HÌNH YTDL & FFMPEG ---
+# --- 2. CẤU HÌNH YTDL & FFMPEG (Đã fix lỗi chặn bot YouTube) ---
 ytdl_format_options = {
     'format': 'bestaudio/best',
     'noplaylist': True,
     'default_search': 'auto',
-    'source_address': '0.0.0.0'
+    'source_address': '0.0.0.0',
+    'extractor_args': {'youtube': {'player_client': ['android', 'web']}}
 }
 
 ffmpeg_options = {
